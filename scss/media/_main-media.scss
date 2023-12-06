@@ -1,0 +1,66 @@
+@media (max-width: 768px){
+    .main {
+        min-height: 130vh;
+        padding-bottom: 10vh;
+    
+        &__container{
+            margin-top: 10vh;
+        }
+        
+        &__background{
+            width: 100vw;
+            height: 100vh;
+            &-car{
+                display: block;
+                height: 55vh;
+                right:0;
+                top: 15%;
+                margin-top: 30vh;
+                filter: drop-shadow(0 0 10px rgb(0, 0, 0) );
+            }
+            &__title, &__title-2{
+                font-weight: 700;
+                font-size: 17vw;
+                margin-top: 15vh;
+                margin-left: 3vw;
+                position: absolute;
+                color: white;
+            }
+            &__title-2{
+                margin-top: 40vw;
+            }
+        }
+        &__descr {
+            text-align: center;
+            font-size: 1em;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    .main {
+        min-height: 100%;
+        padding-bottom: 100px;
+    
+        &__container{
+            margin-top: 100px;
+        }
+        
+        &__background{
+            height: 450px;
+            &-car{
+                height: 300px;
+                right:0%;
+                bottom: 50%;
+                margin-top: 100px;
+            }
+            &__title, &__title-2{
+                font-size: 150px;
+                margin-top: 80px;
+            }
+            &__title-2{
+                margin-top: 250px;  
+            }
+        }
+    }
+}
