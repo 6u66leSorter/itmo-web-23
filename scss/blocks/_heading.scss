@@ -1,0 +1,15 @@
+.heading {
+    text-align: center;
+	margin-bottom: 5vh;
+    &__title{
+		margin: 0;
+        font-size: 1.7em;
+	    text-align: center;
+    }
+    &__line{
+		width: 7vh;
+		height: 0.2vh;
+		background-color: $background-color_1;
+		margin: 2vh auto;
+	}
+}

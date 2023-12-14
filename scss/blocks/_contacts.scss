@@ -1,0 +1,26 @@
+.contacts{
+    min-height: 50vh;
+    margin-top: 20vh;
+    padding-bottom: 15vh;
+    &__wrapper{
+        display: flex;
+        width: 75%;
+        margin: 0 auto;
+    }
+    &__item{
+        flex: 50%;
+        text-align: center;
+        display: block;
+    }
+    &__subtitle{
+        font-size: 1.6em;
+        font-weight: 500;
+        margin: 2vh 0;
+    }
+    &__content{
+        font-size: 1em;
+        a {
+            color: $color_2;
+        }
+    }
+}

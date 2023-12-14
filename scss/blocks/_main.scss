@@ -1,0 +1,42 @@
+.main {
+	min-height: 130vh;
+	padding-bottom: 10vh;
+
+	&__container{
+		margin-top: 10vh;
+	}
+	
+	&__background{
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background-color: black;
+		filter: drop-shadow(0 0 10px rgb(0, 0, 0) );
+		&-car{
+			position: absolute;
+			display: block;
+			height: 55vh;
+			right:0;
+			top: 15%;
+			margin: 0 auto;
+			margin-top: 30vh;
+			filter: drop-shadow(0 0 10px rgb(0, 0, 0) );
+		}
+		&__title, &__title-2{
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 30vh;
+			margin-top: 15vh;
+			margin-left: 3vw;
+			position: absolute;
+			color: white;
+		}
+		&__title-2{
+			margin-top: 50vh;
+		}
+	}
+	&__descr {
+		text-align: center;
+		font-size: 1em;
+	}
+}
