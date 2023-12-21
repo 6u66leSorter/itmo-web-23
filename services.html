@@ -10,24 +10,25 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__container">
-            <a class="header__link-logo" href="index.html">AVTO IMPORT</a>
-            <ul class="header__links">
-                <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
-                <li class="header__item"><a class="header__link" href="services.html">Услуги</a></li>
-                <li class="header__item"><a class="header__link" href="catalouge.html">Каталог</a></li>
-                <li class="header__item"><a class="header__link" href="contacts.html">Контакты</a></li>
-            </ul>
-    
-            <div class="header__hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-    
-        </nav>
-    </header>
+<header class="header">
+    <nav class="header__container">
+        <a class="header__link-logo" href="index.html">AVTO IMPORT</a>
+        <ul class="header__links">
+            <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+            <li class="header__item"><a class="header__link" href="services.html">Услуги</a></li>
+            <li class="header__item"><a class="header__link" href="catalouge.html">Каталог</a></li>
+            <li class="header__item"><a class="header__link" href="contacts.html">Контакты</a></li>
+            <li class="header__item"><a class="header__link" href="applyes.html">Заявки</a></li>
+        </ul>
+
+        <div class="header__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+</header>
 
 <section class="services">
     <div class="container">
@@ -35,33 +36,47 @@
             <h1 class="heading__title">Услуги</h1>
             <div class="heading__line"></div>
         </div>
-        
+
         <table class="services__table">
             <tbody>
-                <tr>
-                    <td class="services__subheader">Наименование услуги</td>
-                    <td class="services__subheader">Описание услуги</td>
-                    <td class="services__subheader">Стоимость</td>
-                </tr>
-                <tr>
-                    <td>Авто под ключ</td>
-                    <td>Организуем подбор, покупку и доставку. Наш контроль всех этапов преобретения авто.</td>
-                    <td>от 350 т.р.</td>
-                </tr>
-                <tr>
-                    <td>Поиск и приобретение автомобиля</td>
-                    <td>Мы поможем вам найти и купить автомобиль по выгодной цене, с учетом ваших требований и пожеланий.</td>
-                    <td>от 100 т.р.</td>
-                </tr>
-                <tr>
-                    <td>Доставка автомобиля из заграницы</td>
-                    <td>Мы организуем доставку автомобиля, включая все необходимые процедуры и документы.</td>
-                    <td>от 200 т.р.</td>
-                </tr>
+            <tr>
+                <td class="services__subheader">Наименование услуги</td>
+                <td class="services__subheader">Описание услуги</td>
+                <td class="services__subheader">Стоимость</td>
+            </tr>
+            <tr>
+                <td>Авто под ключ</td>
+                <td>Организуем подбор, покупку и доставку. Наш контроль всех этапов преобретения авто.</td>
+                <td>от 350 т.р.</td>
+            </tr>
+            <tr>
+                <td>Поиск и приобретение автомобиля</td>
+                <td>Мы поможем вам найти и купить автомобиль по выгодной цене, с учетом ваших требований и пожеланий.</td>
+                <td>от 100 т.р.</td>
+            </tr>
+            <tr>
+                <td>Доставка автомобиля из заграницы</td>
+                <td>Мы организуем доставку автомобиля, включая все необходимые процедуры и документы.</td>
+                <td>от 200 т.р.</td>
+            </tr>
             </tbody>
         </table>
     </div>
 </section>
+
+<section class="reviews">
+    <div class="container reviews__container">
+        <h2 class="reviews__title">Отзывы клиентов</h2>
+        <div class="reviews__wrapper">
+            <div class="apply__preloader" id="preloader">
+                <img src="bouncing-circles.svg"  alt="" width="50px" height="300px">
+            </div>
+            <div id="reviewsList"></div>
+        </div>
+    </div>
+</section>
+
+<script src="getData.js"></script>
 
 <footer>
     <p>&copy; Auto Import 2017</p>

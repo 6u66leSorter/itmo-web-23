@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
 
-    <header class="header">
-        <nav class="header__container">
-            <a class="header__link-logo" href="index.html">AVTO IMPORT</a>
-            <ul class="header__links">
-                <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
-                <li class="header__item"><a class="header__link" href="services.html">Услуги</a></li>
-                <li class="header__item"><a class="header__link" href="catalouge.html">Каталог</a></li>
-                <li class="header__item"><a class="header__link" href="contacts.html">Контакты</a></li>
-            </ul>
-    
-            <div class="header__hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-    
-        </nav>
-    </header>
+<header class="header">
+    <nav class="header__container">
+        <a class="header__link-logo" href="index.html">AVTO IMPORT</a>
+        <ul class="header__links">
+            <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+            <li class="header__item"><a class="header__link" href="services.html">Услуги</a></li>
+            <li class="header__item"><a class="header__link" href="catalouge.html">Каталог</a></li>
+            <li class="header__item"><a class="header__link" href="contacts.html">Контакты</a></li>
+            <li class="header__item"><a class="header__link" href="applyes.html">Заявки</a></li>
+        </ul>
+
+        <div class="header__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+</header>
 
 <section class="catalog">
     <div class="container">
@@ -41,21 +42,42 @@
         <div class="catalog__wrapper">
 
             <div class="catalog__item">
-                <img class="catalog__item-img" src="img/X5.jpeg" alt="Картинка 1">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/X5.jpeg" alt="Картинка 1"></div>
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/X5.jpeg" alt="Картинка 1"></div>
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/X5.jpeg" alt="Картинка 1"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination" style="position: static; --swiper-theme-color: #5b5b5b"></div>
                 <div class="catalog__item-subtitle">BMW X5M F85 2016</div>
                 <div class="catalog__item-price">Цена: 6 000 000 руб.</div>
                 <button class="catalog__button">Заказать</button>
             </div>
 
             <div class="catalog__item">
-                <img class="catalog__item-img" src="img/M3.jpeg" alt="Картинка 1">
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/M3.jpeg" alt="Картинка 1"></div>
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/M3.jpeg" alt="Картинка 1"></div>
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/M3.jpeg" alt="Картинка 1"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination2" style="position: static; --swiper-theme-color: #5b5b5b"></div>
                 <div class="catalog__item-subtitle">BMW M3 F80 2018</div>
                 <div class="catalog__item-price">Цена: 7 500 000 руб.</div>
                 <button class="catalog__button">Заказать</button>
             </div>
 
             <div class="catalog__item">
-                <img class="catalog__item-img" src="img/q7.jpeg" alt="Картинка 1">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/q7.jpeg" alt="Картинка 1"></div>
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/q7.jpeg" alt="Картинка 1"></div>
+                        <div class="swiper-slide"><img class="catalog__item-img" src="img/q7.jpeg" alt="Картинка 1"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination3" style="position: static; --swiper-theme-color: #5b5b5b"></div>
                 <div class="catalog__item-subtitle">Audi Q7 II (4L) 2020</div>
                 <div class="catalog__item-price">Цена: 8 000 000 руб.</div>
                 <button class="catalog__button">Заказать</button>
@@ -64,6 +86,40 @@
         </div>
     </div>
 </section>
+
+
+<!-- Подключение стороннего скрипта библиотеки -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+<!-- Использование библиотки Swiper реализовано в карточке машины. Можно просматривать
+несколько изображений машины в каталоге -->
+<script>
+    // создано три свайпера для машин в каталоге
+    // первый аргумент - это обращение к определенному свайперу. Второй - анонимная функция,
+    // в ней указаны параметры расстояния между фото и так же параметры прогресса листания
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper(".mySwiper1", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination2",
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper(".mySwiper2", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination3",
+            clickable: true,
+        },
+    });
+</script>
 
 <footer>
     <p>&copy; Auto Import 2017</p>

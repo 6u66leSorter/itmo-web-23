@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__container">
+            <a class="header__link-logo" href="index.html">AVTO IMPORT</a>
+            <ul class="header__links">
+                <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+                <li class="header__item"><a class="header__link" href="services.html">Услуги</a></li>
+                <li class="header__item"><a class="header__link" href="catalouge.html">Каталог</a></li>
+                <li class="header__item"><a class="header__link" href="contacts.html">Контакты</a></li>
+                <li class="header__item"><a class="header__link" href="applyes.html">Заявки</a></li>
+            </ul>
+    
+            <div class="header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+        </nav>
+    </header>
+
+    <section class="apply">
+        <div class="container">
+
+            <div class="heading">
+                <h2 class="heading__title">Завки на оказание услуг</h2>
+                <div class="heading__line"></div>
+            </div>
+
+            <form id="form" class="apply__form">
+                <div class="apply__title">Введите данные вашей заявки:</div>
+                <label class="apply__label">Ваше имя:</label>
+                <input type="text" id="name" class="apply__input" placeholder="Иван"><br>
+
+                <label class="apply__label">Ваша фамилия:</label>
+                <input type="text" id="brand" class="apply__input" placeholder="Иванов"><br>
+        
+                <label class="apply__label">Выберете услугу:</label>
+                    <select class="apply__input" id="model" name="cars">
+                        <option value="Авто под ключ">Авто под ключ</option>
+                        <option value="Поиск и приобретение автомобиля">Поиск и приобретение автомобиля</option>
+                        <option value="Доставка автомобиля из заграницы">Доставка автомобиля из заграницы</option>
+                    </select><br>
+        
+                <label class="apply__label">Ваша почта:</label>
+                <input type="text" id="year" class="apply__input" placeholder="example@post.com"><br>
+        
+                <button type="submit" id="add" class="apply__button">Создать заявку</button>
+            </form>
+    
+
+            <div class="apply__lists">
+                <div id="car-list" class="apply__car-wrapper">
+                    <h2 class="apply__title">Текущие заявки:</h2>
+                    <button id="delete" class="apply__button apply__button-del">Очистить список</button>
+                    <div id="empty" class="apply__empty"> Список пуст...</div>
+                </div>
+            </div>
+            
+
+            <script src="generator.js"></script>
+
+        </div>
+    </section>
+
+
+
+<footer>
+    <p>&copy; Auto Import 2017</p>
+    <div class="footer__load-speed"></div>
+</footer>
+</body>
+</html>
