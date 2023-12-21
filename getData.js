@@ -6,16 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const anchor = document.getElementById('reviewsList');
 
     const fetchData = () => {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const response = await fetch('https://jsonplaceholder.typicode.com/comments');
-                const data = await response.json();
+        return fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('⚠️ Ошибка HTTP: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
                 const randomComments = getRandomComments(data, 10);
-                resolve(randomComments);
-            } catch (error) {
-                reject(new Error('⚠ Что-то пошло не так'));
-            }
-        });
+                return randomComments;
+            })
+            .catch(error => {
+                throw new Error('⚠️ Что-то пошло не так: ' + error.message);
+            });
     };
 
     const getRandomComments = (data, count) => {
